@@ -7,10 +7,10 @@ with open('jokes/__init__.py', encoding='utf-8') as fid:
             break
 
 setup(
-    name='LearningPlayground',
+    name='TrainingTutorials',
     version=VERSION,
-    description='Training repo for new users to make mistakes',
-    url='git@github.com:wpklab/training.git',
+    description='Training repo designed for practicing and making mistakes',
+    url='git@github.com:djmcgregor/training.git',
     author='Davis J. McGregor',
     author_email='davisjm2@illinois.edu',
     license='MIT',
