@@ -15,8 +15,11 @@ Use this repo to play around with Git and GitHub and to better understand what e
     - GitHub PR and Issue
 
 #### Moderate Sections
+- Merge conflicts
 - Formatting code
-- Git cherry-pick
+- Git commands
+    - git cherry-pick
+    - git reset
 - Versioning
 - Multiple remotes
 
