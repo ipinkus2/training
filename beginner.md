@@ -35,10 +35,12 @@ This is an excellent [Guide](https://docs.github.com/en/github/getting-started-w
 3. Fork (i.e. make a copy) this repository to your GitHub account. 
     - Navigate to this repository at https://github.com/djmcgregor/training
     - In the upper right hand corner, click on the **Fork** button. This will create a copy of this repository in your personal GitHub account. Now you can make all the changes you want in your personal playground, and the Lab copy will remain unchanged if you ever need to start over.
-    ![github_fork](https://docs.github.com/assets/images/help/repository/fork_button.jpg)
+    
+        ![github_fork](https://docs.github.com/assets/images/help/repository/fork_button.jpg)
 0. Clone the code to your local machine
     - Copy the clone link for your new repo. This can be accessed through GitHub. Click the green **Download Code** button and copy the **Clone with HTTPS** link
-    ![github_clone](https://docs.github.com/assets/images/help/repository/https-url-clone.png)
+    
+        ![github_clone](https://docs.github.com/assets/images/help/repository/https-url-clone.png)
     - In Git, navigate to a directory where you want to make a local copy of your new repo
         - Use `cd <folder>` to move into a folder, and `cd ..` to move up a directory
     - Now use Git to `clone` your new repo. You can paste the clone link by pressing `shift + insert`
@@ -77,7 +79,8 @@ This is an excellent [Guide](https://docs.github.com/en/github/getting-started-w
         - Commit time
         - List of files changed
     - You can even click on one of the files changed and see exactly what lines of code changed in the commit. Green represents additions, and red indicates deletions
-    ![from_git_graph](https://github.com/mhutchie/vscode-git-graph/raw/master/resources/demo.gif)
+    
+        ![from_git_graph](https://github.com/mhutchie/vscode-git-graph/raw/master/resources/demo.gif)
 
 ---
 ## Git Commands
@@ -129,7 +132,8 @@ There are a couple git commands that are necessary to understand as you get star
 ---
 ## GitHub Workflow
 Often, we work on code with other people. GitHub is an excellent tool to communicate with each other about proposed changes, bugs, and questions. Read about the GitHub workflow at https://guides.github.com/introduction/flow/
-![](https://cdn-images-1.medium.com/max/1600/1*iHPPa72N11sBI_JSDEGxEA.png)
+
+![github_workflow](https://cdn-images-1.medium.com/max/1600/1*iHPPa72N11sBI_JSDEGxEA.png)
 **TLDR**
 - Keep the `main` or `master` branch clean and develop new features in parallel branches. 
 - Checkout a branch, make commits, and open a GitHub Pull Request (PR).
@@ -229,9 +233,12 @@ As you walk though this practice session, frequently check the git log or git gr
     - Let's explore a convenient alternative directly in VSC using the "GitHub Pull Requests and Issues" extension
     - In VSC, open [learning/mistakes.py](./learning/mistakes.py). Notice the `# TODO:` tag on line 25. This is one of the flags for the extension.
     - Click on `TODO` and hover. You should see a yellow lightbulb appear to the left. Click on the lightbulb and select "Create GitHub Issue"
-    ![vsc_github_issue](./assets/vsc_github_issue_1.png)
+    
+        ![vsc_github_issue](./assets/vsc_github_issue_1.PNG)
     - When the "Create Issue" dialogue pops up, you can choose to edit the description and add more information such as assigning specific people or labels to the issue.
-    ![vsc_github_issue](./assets/vsc_github_issue_2.png)
+    
+        ![vsc_github_issue](./assets/vsc_github_issue_2.PNG)
     - Finish creating the issue (click check mark and save changes). GitHub will now be updated with a new issue, and the extension automatically updates the `# TODO` tag with the issue number. Now your issue is linked to the code, and the code references the issue directly. Commit this update as you see appropriate.
-    ![vsc_github_issue](./assets/vsc_github_issue_3.png)
+    
+        ![vsc_github_issue](./assets/vsc_github_issue_3.PNG)
     - You can explore more on the **GitHub** tab in VSC
