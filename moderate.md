@@ -1,16 +1,25 @@
 # Moderate Tutorials
 #### Sections
+- [Git commands](#git-commands)
 - [Merge conflicts](#merge-conflicts)
 - [Formatting code](#formatting-code)
-- [Git commands](#git-commands)
 - [Versioning](#versioning)
 - [Referencing](#referencing)
 - [Multiple remotes](#multiple-remotes)
 ---
+## Git Commands
+By now, you can probably look into Git commands on your own. Some useful commands to get familiar with include
+```bash
+$ git cherry-pick   # quite easy to use in VSC
+$ git reset
+$ git rebase
+$ git tag
+```
+---
 ## Merge Conflicts
 Merging and conflicts are a common part of the Git experience. Conflicts generally arise when two people have changed the same lines in a file, or if the same file was modified on both branches involved in the merge. Luckily, resolving a merge conflict is often straightforward. Let's get familiar with solving merge conflicts by purposefully creating a conflict in this next section, and solving it three different ways.
 1. Checkout a new branch from the `main` branch and name it `conflict`
-0. In VSC, open the `learning/mistakes.py` file and edit line 6
+0. In VSC, open the [`learning/mistakes.py`](./learning/mistakes.py) file and edit line 6
     ```python
     return ('Getting a PhD is easy')
     # update to say 
@@ -77,15 +86,37 @@ Merging and conflicts are a common part of the Git experience. Conflicts general
         ```    
 ---
 ## Formatting Code
+Code formatting is important for code readability. As you code over time, and especially when you develop with multiple people, a code formatter will make it simple to keep consistent formatting across all your documents. Personally, I like [YAPF](https://pypi.org/project/yapf/) (yet another python formatter). The "knob settings" I use can be found in the [`.style.yapf`](./.style.yapf) file.
 
-
----
-## Git Commands
-    - git cherry-pick
-    - git reset
+1. Install yapf
+    - Type ``Ctrl + ` `` (thats the backtick character) to open the terminal in VSC
+    - In the terminal, type `pip install yapf`
+    - Close the terminal and open [`learning/mistakes.py`](./learning/mistakes.py)
+0. Run the formatter
+    - Type `Shift + Alt + F` to run the formatter
+        - Alternatively type `Ctrl + Shift + P` to bring up the command palette, and search for "Format Document"
+    - Notice which lines change and how the formatter makes the document easier to read.
+0. You can obviously find many more examples online, and I encourage you to play around with the "knob settings" to get a sense of what each one does.
 
 ---
 ## Versioning
+When code is released publicly, developers use version numbers to keep things straight. It marks a snapshot in time, and allows users to call a frozen version of the code. Once a version is released, it NEVER change, and the results are always the same. However, new versions can always be created, and they supersede old releases.
+
+For questions regarding versioning, refer to this guide on [Semantic Versioning](https://semver.org/). Here's a quick cheat sheet for how our lab operates (note: `devN` releases are rare)
+
+- MAJOR.MINOR.PATCH[.DEV] or `X.Y.Z[.devN]` will be the version style used
+    - MAJOR version zero `0.y.z` is for initial development. Anything MAY change at any time
+    - MAJOR version X `X.y.z` MUST be incremented if any backwards incompatible changes are introduced
+    - MINOR version Y `x.Y.z` MUST be incremented if new, backwards compatible functionality is introduced
+    - PATCH version Z `x.y.Z` MUST be incremented if only backwards compatible bug fixes are introduced
+    - In early development, it MAY be desireable to provide API access to a developmental release `x.y.z.devN`
+        - Dev versions are superseded by full releases of the same number. For example
+        ```
+        0.1.0 --> 0.2.0.dev0 --> 0.2.0.dev1 --> 0.2.0 --> 0.2.1
+        ``` 
+
+Version releases are achieved by the use of "tags." Tags can be created in GitHub, or with the `git tag` command. I'll leave it to you to explore more on this front.
+- Note that once tags are created, we can reference them quite easily. Similar to how we can reference PRs, Issues, and individual commit hashes.
 
 ---
 ## Referencing
