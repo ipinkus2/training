@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open('jokes/__init__.py', encoding='utf-8') as fid:
+with open('learning/__init__.py', encoding='utf-8') as fid:
     for line in fid:
         if line.startswith('__version__'):
             VERSION = line.strip().split()[-1][1:-1]
