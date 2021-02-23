@@ -25,3 +25,14 @@ def add(a, b):
     # TODO: generalize so we can add more than floats
     c = a - b   # oops, fix this mistake
     return c
+
+
+def needs_formatting(a,b,c,d):
+    ''' Doc strings can be one line too '''
+    f = a-b       # comments start at specific points
+    g = c*d    # and they will align with each other
+
+    # Note what happens to complex equations
+    # Also training whitespace is removed
+    answer = (a+b)*(c+d)     
+    return answer
