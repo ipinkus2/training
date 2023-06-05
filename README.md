@@ -1,7 +1,7 @@
 # Training Tutorials
 
 Use this repo to play around with Git and GitHub and to better understand what each command is really doing. I walk through beginner setup activities, as well as more advanced tools we use in the lab.
-
+This is a test change
 ## [Beginner Sections](./beginner.md)
 - [Introduction to Git and GitHub](./beginner.md#introduction)
 - [Initial setup](./beginner.md#initial-setup)
